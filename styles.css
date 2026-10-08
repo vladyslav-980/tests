@@ -53,14 +53,26 @@ body{
     font-family:  Arial, Helvetica, sans-serif;
 }
 
-header{
-    color:azure;
-    background-color:blue;
+   header {
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+
+    color: azure;
+    background-color: blue;
+    padding: 20px;
+}
+
+
+.navigation{
+    display: flex;
+    gap: 20px;
 }
 
 #hero{
     background-color: aliceblue;
     text-align: center;
+    padding: 100px 0;
 }
 
 h1{
@@ -70,24 +82,55 @@ h1{
 
 h2{
     font-size: 35px;
+    margin-bottom: 20px;
 }
 
 #about{
     color: rgb(46, 34, 37);
     background-color: bisque;
+    padding: 50px 20px;
 }
 
 #projects{
     background-color:cadetblue;
+    padding: 50px 20px;
+}
+
+.projects-list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .project-card{
     background-color: lightgray;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 300px;
+}
+
+#contacts{
+    padding: 50px 20px;
+}
+
+.contacts-list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card{
+    padding: 10px;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 12px;
 }
 
 footer{
     color: azure;
     background-color: blue;
+    padding: 20px;
 }
 
 
