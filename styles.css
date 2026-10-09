@@ -53,20 +53,64 @@ body{
     font-family:  Arial, Helvetica, sans-serif;
 }
 
-   header {
-    display: flex;
-     justify-content: space-between;
-    align-items: center;
-
+header{
     color: azure;
-    background-color: blue;
-    padding: 20px;
+    background-color: lightskyblue;
+    padding: 20px 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    transition: 0.5s;
+}
+
+.logo:hover{
+    transform: scale(1.25);
 }
 
 
-.navigation{
+.navigation-list{
     display: flex;
     gap: 20px;
+}
+
+.navigation-list li{
+    transition: 0.5s;
+    position: relative;
+}
+
+.navigation-list li::after{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: white;
+
+    transition: 0.5s;
+}
+
+.navigation-list li:hover::after {
+    width: 100%;
+}
+
+.navigation-list li:hover{
+    transform: scale(1.25);
 }
 
 #hero{
@@ -87,13 +131,13 @@ h2{
 
 #about{
     color: rgb(46, 34, 37);
-    background-color: bisque;
-    padding: 50px 20px;
+    background-color: lightsteelblue;
+    padding: 50px 0;
 }
 
 #projects{
-    background-color:cadetblue;
-    padding: 50px 20px;
+    background-color:lightgray;
+    padding: 50px 0;
 }
 
 .projects-list{
@@ -108,11 +152,45 @@ h2{
     border: 2px solid black;
     border-radius: 12px;
     width: 300px;
+    transition: 0.5s;
+}
+
+.project-card:hover{
+    border: 2px solid lightskyblue;
+    transform: scale(1.05);
+    color: lightslategray;
 }
 
 #contacts{
-    padding: 50px 20px;
+    padding: 50px 0;
 }
+
+.contacts-form{
+    padding: 20px;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-textarea{
+    font-size: 25px;
+    width: 300;
+}
+
+.form-input{
+    padding: 10px;
+    margin: 10px 0;
+    width: 300px;
+}
+
+.textarea-input{
+    padding: 10px 10px 100px 10px;
+    margin: 10px 0;
+    width: 300px;
+}
+
 
 .contacts-list{
     display: flex;
@@ -122,15 +200,47 @@ h2{
 
 .contact-card{
     padding: 10px;
-    background-color: aqua;
+    background-color: lightskyblue;
     border: 1px solid black;
     border-radius: 12px;
+    transition: 0.5s;
+}
+
+.contact-card:hover{
+    transform: scale(1.1);
 }
 
 footer{
     color: azure;
-    background-color: blue;
-    padding: 20px;
+    background-color: lightskyblue;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 0 20px;
+    }
+    header .container{
+        flex-direction:column;
+    }
+    .navigation-list{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    h1{
+        font-size: 30px;
+        font-weight: 300;
+    }
+    h2{
+        font-size: 23px;
+    }
+    .projects-list{
+        flex-direction: column;
+    }
+    .project-card{
+        width: 100%;
+    }
 }
 
 
